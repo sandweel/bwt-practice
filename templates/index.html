@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Ласкаво просимо!</h2>
+{% if current_user %}
+<p>Ви зареєстровані!</p>
+{% endif %}
+{% if not current_user %}
+  <p><a href="/login" class="btn btn-primary">Увійти</a> або <a href="/register" class="btn btn-secondary">Зареєструватися</a></p>
+{% else %}
+  <p><a href="/members" class="btn btn-success">Перейти до списку учасників</a></p>
+{% endif %}
+{% endblock %}

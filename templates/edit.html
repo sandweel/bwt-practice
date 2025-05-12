@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Редагування даних</h2>
+<form method="post">
+    <div class="mb-3"><input name="first_name" class="form-control" placeholder="Ім’я" value="{{ current_user.first_name }}" required></div>
+    <div class="mb-3"><input name="last_name" class="form-control" placeholder="Прізвище" value="{{ current_user.last_name }}" required></div>
+    <div class="mb-3"><input name="organization" class="form-control" placeholder="Організація" value="{{ current_user.organization }}" required></div>
+    <div class="mb-3"><input name="position" class="form-control" placeholder="Посада" value="{{ current_user.position }}" required></div>
+
+    <hr>
+
+    <h5>Зміна пароля (необов'язково)</h5>
+    <div class="mb-3"><input type="password" name="old_password" class="form-control" placeholder="Старий пароль"></div>
+    <div class="mb-3"><input type="password" name="new_password" class="form-control" placeholder="Новий пароль"></div>
+    <div class="mb-3"><input type="password" name="confirm_password" class="form-control" placeholder="Підтвердження нового пароля"></div>
+
+    {% if error %}<div class="alert alert-danger">{{ error }}</div>{% endif %}
+
+    {% if message %}<div class="alert alert-success">{{ message }}</div>{% endif %}
+
+    <button class="btn btn-primary" type="submit">Зберегти</button>
+</form>
+{% endblock %}
