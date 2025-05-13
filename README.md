@@ -23,8 +23,8 @@
 1. **Клонування репозиторію**:
 
     ```bash
-    git clone https://github.com/yourusername/fastapi-user-management.git
-    cd fastapi-user-management
+    git clone git@github.com:sandweel/bwt-practice.git
+    cd bwt-practice
     ```
 
 2. **Створення `.env` файлу**:
@@ -32,16 +32,16 @@
     Створіть файл `.env` в корені проекту і вкажіть параметри підключення до бази даних:
 
     ```env
-DB_HOST=db
-DB_USER=db_user
-DB_PASSWORD=db_pass
-DB_NAME=db_name
-DB_PORT=5432
-SECRET_KEY=secret_key
+    DB_HOST=db
+    DB_USER=db_user
+    DB_PASSWORD=db_pass
+    DB_NAME=db_name
+    DB_PORT=5432
+    SECRET_KEY=secret_key
     ```
 
     Замість `db_user`, `db_pass`, `db_name`, і `secret_key` вкажіть відповідні значення.
-
+    
     **NOTE** DB_HOST повинен мати значення `db`, якщо запуск у docker
 
 3. **Запуск Docker Compose**:
